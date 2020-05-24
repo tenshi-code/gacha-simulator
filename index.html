@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Super Mecha Champions Gacha Simulator</title>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/gacha-simulator/css/style.css">
+</head>
+<body>
+    <div id="historyDiv">
+        <span class="close">&nbsp;</span>
+    </div>
+    <div class="history">
+        <button type="button" class="history__btn" onclick="myFunction()">History</button>
+    </div>
+    <main class="container">
+        <div class="statistics">
+            <div class="statistics__spent">Crystals spent: 1800 crystals</div>
+            <div class="statistics__value">
+                <label for="currency">Value of crystals in real currency: 100 USD</label>
+                <span class="statistics__value--change">Change the currency:</span>
+                <div class="custom-select">
+                    <select name="currency" id="currency">
+                        <option value="select">USD</option>
+                        <option value="usd">USD</option>
+                        <option value="eur">EUR</option>
+                        <option value="gbp">GBP</option>
+                        <option value="aud">AUD</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        <h1 class="heading">Welcome to the Super Mecha Champions gacha simulator!</h1>
+        <div class="results">
+        </div>
+        <div class="open1">
+            <span class="open1__price"><img src="/gacha-simulator/img/381-3816508_gold-bar-png-transparent-background-gold-bar-vector.png"/>100</span>
+            <button type="button" class="open1__btn">Open 1</button>
+        </div>
+        <div class="open10">
+            <span class="open10__price"><img src="/gacha-simulator/img/381-3816508_gold-bar-png-transparent-background-gold-bar-vector.png"/>900 <del class="open10__price--deleted">1000</del></span>
+            <button type="button" class="open10__btn">Open 10</button>
+        </div>
+    </main>
+    <footer>
+
+    </footer>
+
+    <script src="/gacha-simulator/js/index.js"></script>
+</body>
+</html>
