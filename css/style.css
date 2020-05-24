@@ -65,7 +65,7 @@ body {
   z-index: 1000;
   height: 100vh;
   width: 100vw;
-  overflow: auto;
+  overflow-y: auto;
   background-color: #fafafa;
   display: grid;
   justify-items: center;
@@ -93,7 +93,8 @@ body {
   width: 32px;
   height: 32px;
   opacity: 0.3;
-  display: none; }
+  display: none;
+  cursor: pointer; }
 
 .close:hover {
   opacity: 1; }
@@ -178,7 +179,8 @@ body {
     text-transform: uppercase;
     padding: 1.5rem 3rem;
     border: 2px solid #303030;
-    border-radius: 8px; }
+    border-radius: 8px;
+    cursor: pointer; }
     .history__btn:focus {
       outline: none; }
 
@@ -310,7 +312,8 @@ body {
   background-image: linear-gradient(to right, rgba(255, 8, 181, 0.9), 15%, rgba(143, 5, 255, 0.9), 75%, rgba(23, 0, 43, 0.9)), url(../img/shapes-transparent-background-23.png);
   background-size: cover;
   background-position: center;
-  clip-path: polygon(10% 0, 100% 0, 100% 80%, 90% 100%, 0 100%, 0 20%); }
+  clip-path: polygon(10% 0, 100% 0, 100% 80%, 90% 100%, 0 100%, 0 20%);
+  cursor: pointer; }
 
 .open1__btn:active {
   transform: translateY(3px) scale(1.01); }
@@ -355,7 +358,8 @@ body {
   background-image: linear-gradient(to right, rgba(255, 224, 46, 0.9), 15%, rgba(255, 234, 41, 0.9)), url(../img/shapes-transparent-background-23.png);
   background-size: cover;
   background-position: center;
-  clip-path: polygon(10% 0, 100% 0, 100% 80%, 90% 100%, 0 100%, 0 20%); }
+  clip-path: polygon(10% 0, 100% 0, 100% 80%, 90% 100%, 0 100%, 0 20%);
+  cursor: pointer; }
 
 .open10__btn:active {
   transform: translateY(3px) scale(1.01); }
