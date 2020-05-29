@@ -207,9 +207,7 @@ body {
   display: grid;
   margin: 0 auto;
   grid-template-rows: 15vh 1fr 15vh;
-  grid-template-columns: repeat(2, 1fr);
-  filter: blur(10px);
-  background-color: rgba(0, 0, 0, 0.3); }
+  grid-template-columns: repeat(2, 1fr); }
   @supports (-webkit-backdrop-filter: blur(10px)) or (backdrop-filter: blur(10px)) {
     .container {
       filter: none;
