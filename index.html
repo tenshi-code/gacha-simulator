@@ -8,17 +8,23 @@
     <link rel="stylesheet" href="/gacha-simulator/css/style.css">
 </head>
 <body>
+    <div id="show-result-id">
+        <img alt="loading" id="loading-id" style="display: none">
+        <p class="any-key" style="display: none">Press any key or click to continue...</p>
+        <div id="gacha-item-id">
+        </div>
+    </div>
     <div id="historyDiv">
         <span class="close">&nbsp;</span>
     </div>
     <div class="history">
-        <button type="button" class="history__btn" onclick="myFunction()">History</button>
+        <button type="button" class="history__btn" onclick="historyBtn()">History</button>
     </div>
     <main class="container">
         <div class="statistics">
-            <div class="statistics__spent">Crystals spent: 0 crystals</div>
+            <div class="statistics__spent">Crystals spent: <img src="/gacha-simulator/img/381-3816508_gold-bar-png-transparent-background-gold-bar-vector.png"/> 0</div>
             <div class="statistics__value">
-                <label for="currency">Value of crystals in real currency: 0 USD</label>
+                <label for="currency" id="currencyLabel">Value of crystals in real currency: 0.00 USD</label>
                 <span class="statistics__value--change">Change the currency:</span>
                 <div class="custom-select">
                     <select name="currency" id="currency">
@@ -36,17 +42,13 @@
         </div>
         <div class="open1">
             <span class="open1__price"><img src="/gacha-simulator/img/381-3816508_gold-bar-png-transparent-background-gold-bar-vector.png"/>100</span>
-            <button type="button" class="open1__btn" onclick="displayResult()">Open 1</button>
+            <button type="button" class="open1__btn" onclick="displayOneRes()">Open 1</button>
         </div>
         <div class="open10">
             <span class="open10__price"><img src="/gacha-simulator/img/381-3816508_gold-bar-png-transparent-background-gold-bar-vector.png"/>900 <del class="open10__price--deleted">1000</del></span>
-            <button type="button" class="open10__btn">Open 10</button>
+            <button type="button" class="open10__btn" onclick="displayTenRes()">Open 10</button>
         </div>
     </main>
-    <footer>
-
-    </footer>
-
     <script src="/gacha-simulator/js/index.js"></script>
 </body>
 </html>
