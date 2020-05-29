@@ -139,7 +139,7 @@ document.addEventListener('click', closeAllSelect);
 
 document.querySelector('.select-selected').addEventListener('click', () => {
 	if (document.querySelector('.select-selected').innerHTML == 'USD') {
-		document.getElementById('currencyLabel').innerHTML = `Value of crystals in real currency: ${currencySpent.toFixed(2)} USD`;
+		document.getElementById('currencyLabel').innerHTML = `Value of crystals in real currency: ${currencySpent} USD`;
 	} else if (document.querySelector('.select-selected').innerHTML == 'EUR') {
 		document.getElementById('currencyLabel').innerHTML = `Value of crystals in real currency: ${(currencySpent * 0.9).toFixed(2)} EUR`;
 	} else if (document.querySelector('.select-selected').innerHTML == 'GBP') {
@@ -453,6 +453,7 @@ const anyKey = document.querySelector('.any-key');
 const statsSpent = document.querySelector('.statistics__spent');
 const currencyLabel = document.getElementById('currencyLabel');
 const labelSelected = document.querySelector('.select-selected');
+const container = document.querySelector('.container');
 let spentCount = 0;
 let currencySpent = 0;
 
@@ -461,7 +462,8 @@ const displayOneRes = () => {
 	loadingID.classList.add('loading');
 	loadingID.removeAttribute('style');
 	loadingID.setAttribute('src', '/gacha-simulator/img/loading.png');
-	anyKey.setAttribute('style', 'display: none');
+    anyKey.setAttribute('style', 'display: none');
+    container.setAttribute('style', 'filter: blur(10px);background-color: rgba(0, 0, 0, 0.3);');
 	setTimeout(() => {
 		document.querySelector('.any-key').setAttribute('style', 'display: block');
 		const result = Math.random() * 100;
@@ -477,13 +479,14 @@ const displayOneRes = () => {
 			gacha.innerHTML = '';
 			gacha.classList.remove('gacha-item');
 			anyKey.setAttribute('style', 'display: none');
-			resID.classList.remove('show-result');
+            resID.classList.remove('show-result');
+            container.removeAttribute('style');
 			document.removeEventListener('keypress', backToHome);
 			document.removeEventListener('click', backToHome);
 		};
 		const displayItem = () => {
 			loadingID.setAttribute('style', 'display: none');
-			gacha.classList.add('gacha-item');
+            gacha.classList.add('gacha-item');
 			const markup = `
 			<img src="/gacha-simulator/img/gacha/${check}.png" alt="Gacha item" class="gacha-item__result" title="${itemNames[
 				check
@@ -497,7 +500,7 @@ const displayOneRes = () => {
 			currencySpent = (0.0166666666666667 * spentCount).toFixed(2);
 			statsSpent.innerHTML = `Crystals spent: <img src="/gacha-simulator/img/381-3816508_gold-bar-png-transparent-background-gold-bar-vector.png"/> ${spentCount}`;
 			if (labelSelected.innerHTML == 'USD') {
-				currencyLabel.innerHTML = `Value of crystals in real currency: ${currencySpent.toFixed(2)} USD`;
+				currencyLabel.innerHTML = `Value of crystals in real currency: ${currencySpent} USD`;
 			} else if (labelSelected.innerHTML == 'EUR') {
 				currencyLabel.innerHTML = `Value of crystals in real currency: ${(currencySpent * 0.9).toFixed(2)} EUR`;
 			} else if (labelSelected.innerHTML == 'GBP') {
@@ -529,7 +532,8 @@ const displayTenRes = () => {
 	loadingID.classList.add('loading');
 	loadingID.removeAttribute('style');
 	loadingID.setAttribute('src', '/gacha-simulator/img/loading.png');
-	anyKey.setAttribute('style', 'display: none');
+    anyKey.setAttribute('style', 'display: none');
+    container.setAttribute('style', 'filter: blur(10px);background-color: rgba(0, 0, 0, 0.3);');
 	setTimeout(() => {
 		document.querySelector('.any-key').setAttribute('style', 'display: block');
 		for (i = 0; i < 10; i++) {
@@ -553,7 +557,8 @@ const displayTenRes = () => {
 			gacha.innerHTML = '';
 			gacha.classList.remove('gacha-item');
 			anyKey.setAttribute('style', 'display: none');
-			resID.classList.remove('show-result');
+            resID.classList.remove('show-result');
+            container.removeAttribute('style');
 			document.removeEventListener('keypress', backToHome);
 			document.removeEventListener('click', backToHome);
 		};
