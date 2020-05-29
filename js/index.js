@@ -139,7 +139,7 @@ document.addEventListener('click', closeAllSelect);
 
 document.querySelector('.select-selected').addEventListener('click', () => {
 	if (document.querySelector('.select-selected').innerHTML == 'USD') {
-		document.getElementById('currencyLabel').innerHTML = `Value of crystals in real currency: ${currencySpent} USD`;
+		document.getElementById('currencyLabel').innerHTML = `Value of crystals in real currency: ${currencySpent.toFixed(2)} USD`;
 	} else if (document.querySelector('.select-selected').innerHTML == 'EUR') {
 		document.getElementById('currencyLabel').innerHTML = `Value of crystals in real currency: ${(currencySpent * 0.9).toFixed(2)} EUR`;
 	} else if (document.querySelector('.select-selected').innerHTML == 'GBP') {
@@ -497,7 +497,7 @@ const displayOneRes = () => {
 			currencySpent = (0.0166666666666667 * spentCount).toFixed(2);
 			statsSpent.innerHTML = `Crystals spent: <img src="/gacha-simulator/img/381-3816508_gold-bar-png-transparent-background-gold-bar-vector.png"/> ${spentCount}`;
 			if (labelSelected.innerHTML == 'USD') {
-				currencyLabel.innerHTML = `Value of crystals in real currency: ${currencySpent} USD`;
+				currencyLabel.innerHTML = `Value of crystals in real currency: ${currencySpent.toFixed(2)} USD`;
 			} else if (labelSelected.innerHTML == 'EUR') {
 				currencyLabel.innerHTML = `Value of crystals in real currency: ${(currencySpent * 0.9).toFixed(2)} EUR`;
 			} else if (labelSelected.innerHTML == 'GBP') {
